@@ -45,18 +45,26 @@ with open(csvpath, newline="") as csvfile:
     print("-----------------------")
     
     
+output_path = os.path.join(".", 'output.txt')
+
+with open (output_path, 'w') as txt: 
+    txt.write("Poll Analysis")
+    txt.write("\n")
+    txt.write("-----------------")
+    txt.write("\n")
+    txt.write("Election Results")
+    txt.write("\n")
+    txt.write("------------------")
+    txt.write("\n")
+    txt.write(f"Total Votes: {Votes}")
+    txt.write("\n")
+    txt.write("------------------")
+    txt.write("\n")
+    txt.write(f"Winner: {Most_Voted}")
+    txt.write("\n")
+    txt.write("------------------")
+
+ 
     
     
-printout = (
-
-    "\Election Results\n"
-    "------------------------\n"
-    f"Total Votes: {Votes}\n"
-    "------------------------\n"
-    f"Winner: {Most_Voted}\n"
-    "-----------------------\n"
-)
-
-output_path = pypoll.txt
-with open(output_path, "w") as txt
-    txt.write(printout)
+    
